@@ -1,19 +1,22 @@
 package ui;
 
-import java.util.List;
-import java.util.Scanner;
-
-import model.*;
 import controller.EntryController;
 import controller.MemberController;
 import exceptions.MemberAlreadyExistsException;
-import exceptions.MemberDoesNotExistException;;
+import exceptions.MemberDoesNotExistException;
+import model.Entry;
+import model.Member;
 
-public class MemberUI {
+import java.util.List;
+import java.util.Scanner;
+
+;
+
+public class UI {
 	public MemberController memberController;
 	public EntryController entryController;
 
-	public MemberUI(EntryController entryController, MemberController memberController) {
+	public UI(EntryController entryController, MemberController memberController) {
 		this.memberController = memberController;
 		this.entryController = entryController;
 	}

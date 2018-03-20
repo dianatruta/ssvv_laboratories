@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Prj_4_FamilyBudget" target="1.5" />
+      <module name="Prj_4_FamilyBudget" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

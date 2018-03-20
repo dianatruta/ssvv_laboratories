@@ -3,7 +3,7 @@ import repository.EntryRepository;
 import repository.MemberRepository;
 import controller.EntryController;
 import controller.MemberController;
-import ui.MemberUI;;
+import ui.UI;;
 
 public class App {
 	public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class App {
 		EntryController entryController = new EntryController(entryRepository, memberRepository);
 		MemberController memberController = new MemberController(memberRepository);
 
-		MemberUI console = new MemberUI(entryController, memberController);
+		UI console = new UI(entryController, memberController);
 		console.run();
 
 	}
