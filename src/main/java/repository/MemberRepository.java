@@ -1,57 +1,80 @@
 package repository;
 
-import java.io.BufferedReader;
+import exceptions.MemberAlreadyExistsException;
+import model.Member;
 
-import model.*;
-
-import java.io.FileReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import exceptions.MemberAlreadyExistsException;
-
 public class MemberRepository {
-	private List<Member> members = new ArrayList<Member>();
+    private List<Member> members;
 
-	private String filename;
+    private String filename;
 
-	public MemberRepository(String fileName) {
-		this.filename = fileName;
-		readFromFile();
-	}
+    public MemberRepository() {
+        members = new ArrayList<>();
+    }
 
-	public void addMember(Member m) throws MemberAlreadyExistsException {
-		if (checkIfExists(m.getId())) {
-			throw new MemberAlreadyExistsException();
-		} else {
-			members.add(m);
-		}
-	}
+    public MemberRepository(String fileName) {
+        this.members = new ArrayList<>();
+        this.filename = fileName;
+        readFromFile();
+    }
 
-	public boolean checkIfExists(int idOfMember) {
-		Optional<Member> tempMember = members.stream().filter(m -> m.getId() == idOfMember).findFirst();
-		return tempMember.isPresent();
-	}
+    public Member addMember(Member m) throws MemberAlreadyExistsException {
+        if (checkIfExists(m.getId())) {
+            throw new MemberAlreadyExistsException();
+        } else {
+            members.add(m);
+            this.saveToFile();
+            return m;
+        }
+    }
 
-	@SuppressWarnings("resource")
-	private void readFromFile() {
-		try {
-			FileReader fileReader = null;
-			BufferedReader bufferedReader = null;
-			String currentLine = null;
+    public boolean checkIfExists(int idOfMember) {
+        Optional<Member> tempMember = members.stream().filter(m -> m.getId() == idOfMember).findFirst();
+        return tempMember.isPresent();
+    }
 
-			fileReader = new FileReader(this.filename);
-			bufferedReader = new BufferedReader(fileReader);
+    @SuppressWarnings("resource")
+    private void readFromFile() {
+        try {
+            FileReader fileReader;
+            BufferedReader bufferedReader;
+            String currentLine;
 
-			while ((currentLine = bufferedReader.readLine()) != null) {
-				String line[] = currentLine.split(";");
-				Member m = new Member(line[0], Integer.parseInt(line[1]));
-				this.members.add(m);
-			}
-		} catch (Exception ex) {
-			System.err.println(ex.getMessage());
-		}
-	}
+            fileReader = new FileReader(this.filename);
+            bufferedReader = new BufferedReader(fileReader);
+
+            while ((currentLine = bufferedReader.readLine()) != null) {
+                String line[] = currentLine.split(";");
+                Member m = new Member(line[0], Integer.parseInt(line[1]));
+                this.members.add(m);
+            }
+        } catch (Exception ex) {
+            System.err.println(ex.getMessage());
+        }
+    }
+
+    @SuppressWarnings("resource")
+    private void saveToFile() {
+        try {
+//            File f = new File(this.filename);
+//            if (!f.exists())
+//                f.createNewFile();
+            BufferedWriter writer = new BufferedWriter(new FileWriter(this.filename));
+
+            for (Member member : members) {
+                String line = member.toString();
+                writer.write(line);
+                writer.write("\n");
+            }
+            writer.close();
+        } catch (Exception ex) {
+            System.err.println(ex.getMessage());
+        }
+    }
 
 }

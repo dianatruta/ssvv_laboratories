@@ -1,19 +1,25 @@
 package controller;
 
-import repository.MemberRepository;
+import exceptions.InvalidMemberException;
 import exceptions.MemberAlreadyExistsException;
 import model.Member;
+import repository.MemberRepository;
+import validators.MemberValidator;
 
 public class MemberController {
 
-	private MemberRepository memberRepository;
+    private MemberValidator memberValidator = new MemberValidator();
 
-	public MemberController(MemberRepository memberRepository) {
-		this.memberRepository = memberRepository;
-	}
+    private MemberRepository memberRepository;
 
-	public void addMember(Member newMember) throws MemberAlreadyExistsException {
-		memberRepository.addMember(newMember);
-	}
+    public MemberController(MemberRepository memberRepository, MemberValidator memberValidator) {
+        this.memberRepository = memberRepository;
+        this.memberValidator = memberValidator;
+    }
+
+    public Member addMember(String id, String name) throws MemberAlreadyExistsException, InvalidMemberException {
+        Member newMember = memberValidator.validate(id, name);
+        return memberRepository.addMember(newMember);
+    }
 
 }

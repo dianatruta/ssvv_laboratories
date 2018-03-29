@@ -1,21 +1,27 @@
-
-import repository.EntryRepository;
-import repository.MemberRepository;
 import controller.EntryController;
 import controller.MemberController;
-import ui.UI;;
+import repository.EntryRepository;
+import repository.MemberRepository;
+import ui.UI;
+import validators.EntryValidator;
+import validators.MemberValidator;
+
+;
 
 public class App {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		EntryRepository entryRepository = new EntryRepository("budgetF.txt");
-		MemberRepository memberRepository = new MemberRepository("membersF.txt");
+        EntryValidator entryValidator = new EntryValidator();
+        MemberValidator memberValidator = new MemberValidator();
 
-		EntryController entryController = new EntryController(entryRepository, memberRepository);
-		MemberController memberController = new MemberController(memberRepository);
+        EntryRepository entryRepository = new EntryRepository("budgetF.txt");
+        MemberRepository memberRepository = new MemberRepository("membersF.txt");
 
-		UI console = new UI(entryController, memberController);
-		console.run();
+        EntryController entryController = new EntryController(entryRepository, memberRepository, entryValidator);
+        MemberController memberController = new MemberController(memberRepository, memberValidator);
 
-	}
+        UI console = new UI(entryController, memberController);
+        console.run();
+
+    }
 }
