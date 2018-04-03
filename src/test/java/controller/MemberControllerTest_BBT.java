@@ -64,4 +64,12 @@ public class MemberControllerTest_BBT {
         memberController.addMember("2", null);
     }
 
+    @Test(expected = MemberAlreadyExistsException.class)
+    public void addMember_alreadyExistMember_throwsException() throws InvalidMemberException,
+            MemberAlreadyExistsException {
+        Member expectedResult = new Member("name", 1);
+        memberController.addMember(String.valueOf(expectedResult.getId()), expectedResult.getName());
+        memberController.addMember(String.valueOf(expectedResult.getId()), expectedResult.getName());
+    }
+
 }
