@@ -12,8 +12,12 @@ import java.util.stream.Collectors;
 
 public class EntryRepository {
 
-    private List<Entry> entries = new ArrayList<Entry>();
+    private List<Entry> entries;
     private String fileName;
+
+    public EntryRepository() {
+        entries = new ArrayList<>();
+    }
 
     public EntryRepository(String fileName) {
         this.fileName = fileName;
