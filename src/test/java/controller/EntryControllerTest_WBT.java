@@ -6,13 +6,10 @@ import exceptions.MemberDoesNotExistException;
 import model.Member;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
 import repository.EntryRepository;
 import repository.MemberRepository;
 import validators.EntryValidator;
 
-@RunWith(MockitoJUnitRunner.class)
 public class EntryControllerTest_WBT {
 
     private EntryController entryController;
