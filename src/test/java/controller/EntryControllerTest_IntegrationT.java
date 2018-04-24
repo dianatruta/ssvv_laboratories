@@ -14,7 +14,7 @@ import validators.MemberValidator;
 
 import static org.junit.Assert.assertEquals;
 
-public class EntryController_IntegrationT {
+public class EntryControllerTest_IntegrationT {
 
     private EntryController entryController;
     private MemberRepository memberRepository;

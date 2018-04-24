@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3413aa29-9838-4ba9-9ff3-26ac460c5406" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/controller/EntryControllerTest_WBT.java" afterPath="$PROJECT_DIR$/src/test/java/controller/EntryControllerTest_WBT.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/controller/EntryController_IntegrationT.java" afterPath="$PROJECT_DIR$/src/test/java/controller/EntryControllerTest_IntegrationT.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntryController_IntegrationT.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/controller/EntryController_IntegrationT.java">
+      <file leaf-file-name="EntryControllerTest_IntegrationT.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/controller/EntryControllerTest_IntegrationT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+            <state relative-caret-position="146">
+              <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -196,6 +196,7 @@
         <option value="$PROJECT_DIR$/src/main/java/repository/EntryRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/controller/EntryControllerTest_WBT.java" />
         <option value="$PROJECT_DIR$/src/test/java/controller/EntryController_IntegrationT.java" />
+        <option value="$PROJECT_DIR$/src/test/java/controller/EntryControllerTest_IntegrationT.java" />
       </list>
     </option>
   </component>
@@ -436,7 +437,57 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EntryController_IntegrationT">
+  <component name="RunManager" selected="JUnit.EntryControllerTest_IntegrationT">
+    <configuration name="EntryControllerTest_IntegrationT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Prj_4_FamilyBudget" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.EntryControllerTest_IntegrationT" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="EntryControllerTest_IntegrationT.getEntriesForMember_validIdMember_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Prj_4_FamilyBudget" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.EntryControllerTest_IntegrationT" />
+      <option name="METHOD_NAME" value="getEntriesForMember_validIdMember_ok" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="EntryControllerTest_WBT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -475,56 +526,6 @@
       <option name="PACKAGE_NAME" value="controller" />
       <option name="MAIN_CLASS_NAME" value="controller.EntryControllerTest_WBT" />
       <option name="METHOD_NAME" value="addEntry_negativeIdMember_throwsException" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="EntryController_IntegrationT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Prj_4_FamilyBudget" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.EntryController_IntegrationT" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="EntryController_IntegrationT.getEntriesForMember_validIdMember_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Prj_4_FamilyBudget" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.EntryController_IntegrationT" />
-      <option name="METHOD_NAME" value="getEntriesForMember_validIdMember_ok" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -646,13 +647,13 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.MemberControllerTest_BBT" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.EntryControllerTest_WBT.addEntry_negativeIdMember_throwsException" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.EntryControllerTest_WBT" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EntryController_IntegrationT.getEntriesForMember_validIdMember_ok" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EntryController_IntegrationT" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EntryControllerTest_IntegrationT.getEntriesForMember_validIdMember_ok" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EntryControllerTest_IntegrationT" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EntryController_IntegrationT" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EntryController_IntegrationT.getEntriesForMember_validIdMember_ok" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.EntryControllerTest_IntegrationT" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EntryControllerTest_IntegrationT.getEntriesForMember_validIdMember_ok" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.EntryControllerTest_WBT" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.EntryControllerTest_WBT.addEntry_negativeIdMember_throwsException" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.MemberControllerTest_BBT" />
@@ -682,14 +683,11 @@
       <workItem from="1523383459589" duration="20000" />
       <workItem from="1524248480465" duration="7127000" />
       <workItem from="1524504390164" duration="1174000" />
-      <workItem from="1524562911993" duration="705000" />
+      <workItem from="1524562911993" duration="1476000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EntryControllerTest_WBT - 2018.04.23 at 20h 34m 08s.xml">
-      <configuration name="EntryControllerTest_WBT" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EntryControllerTest_WBT_addEntry_negativeIdMember_throwsException - 2018.04.20 at 21h 32m 08s.xml">
       <configuration name="EntryControllerTest_WBT.addEntry_negativeIdMember_throwsException" configurationId="JUnit" />
     </history-entry>
@@ -700,6 +698,9 @@
       <configuration name="EntryController_IntegrationT" configurationId="JUnit" />
     </history-entry>
     <history-entry file="EntryController_IntegrationT - 2018.04.24 at 12h 53m 40s.xml">
+      <configuration name="EntryController_IntegrationT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EntryController_IntegrationT - 2018.04.24 at 12h 53m 57s.xml">
       <configuration name="EntryController_IntegrationT" configurationId="JUnit" />
     </history-entry>
     <history-entry file="EntryController_IntegrationT_getEntriesForMember_validIdMember_ok - 2018.04.24 at 12h 48m 48s.xml">
@@ -719,11 +720,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48192000" />
+    <option name="totallyTimeSpent" value="48963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -733,12 +733,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282313" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282313" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26172465" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26172465" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1223,10 +1223,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/controller/EntryController_IntegrationT.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/controller/EntryControllerTest_IntegrationT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+        <state relative-caret-position="146">
+          <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
