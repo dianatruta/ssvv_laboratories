@@ -15,9 +15,6 @@ public class EntryControllerTest_WBT {
     private EntryController entryController;
     private MemberRepository memberRepository;
 
-    public EntryControllerTest_WBT() {
-    }
-
     @Before
     public void setUp() throws Exception {
         EntryValidator entryValidator = new EntryValidator();
